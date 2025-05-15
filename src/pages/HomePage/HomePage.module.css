@@ -1,0 +1,27 @@
+.section {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  background-image: url(../../assets/hero/Hero@1x.jpg); /* або .webp / .svg */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100vh;
+}
+@media screen and (min-device-pixel-ratio: 2),
+  screen and (min-resolution: 2dppx),
+  screen and (min-resolution: 192dpi) {
+  .section {
+    background-image: url("../../assets/hero/Hero@2x.jpg");
+  }
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  background: var(--badges);
+  border-bottom: 1px solid var(--badges);
+  padding: 24px 120px;
+  width: 1440px;
+  height: 68px;
+}

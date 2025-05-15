@@ -1,0 +1,13 @@
+.LoadMoreBtnWrap {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+.loadMoreBtn {
+  background-color: darkblue;
+  color: white;
+  border: none;
+}
+.loadMoreBtn:hover {
+  background-color: cornflowerblue;
+}

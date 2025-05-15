@@ -1,0 +1,27 @@
+.nav {
+  display: flex;
+  gap: 32px;
+}
+
+.link {
+  font-size: 16px;
+  font-weight: 500;
+  color: var(--main);
+  text-decoration: none;
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+.link:hover {
+  color: var(--button);
+}
+.active {
+  color: var(--button);
+}
+.span {
+  font-family: var(--font-family);
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 125%;
+  text-align: center;
+}

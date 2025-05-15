@@ -1,0 +1,15 @@
+:root {
+  /* 🎨 Кольори */
+  --main: #101828;
+  --gray: #8d929a;
+  --gray-light: #dadde1;
+  --badges: #f2f4f7;
+  --inputs: #f7f7f7;
+  --white: #ffffff;
+  --button: #3470ff;
+  --button-hover: #0b44cd;
+
+  /* 🔤 Шрифти */
+  --font-family: "Manrope", sans-serif;
+  --second-family: "Inter", sans-serif;
+}
