@@ -37,8 +37,23 @@ const carsSlice = createSlice({
         state.isLoading = false;
         state.error = action.payload;
       })
+      .addCase(fetchCarById.pending, (state) => {
+        state.isLoading = true;
+      })
       .addCase(fetchCarById.fulfilled, (state, action) => {
-        state.selectedCar = action.payload;
+        state.isLoading = false;
+        const payload = action.payload;
+
+        state.selectedCar = {
+          ...payload,
+          year: payload.year || payload.yea,
+        };
+      })
+
+      .addCase(fetchCarById.rejected, (state) => {
+        state.isLoading = false;
+        state.selectedCar = null;
+        state.error = action.payload;
       });
   },
 });

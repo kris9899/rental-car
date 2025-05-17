@@ -3,9 +3,7 @@
   justify-content: center;
   flex-direction: row;
   flex-wrap: wrap;
-  gap: 32px;
-  object-fit: auto;
-  margin-top: 208px;
+  gap: 48px 32px;
 }
 .carsItems {
   box-sizing: border-box;

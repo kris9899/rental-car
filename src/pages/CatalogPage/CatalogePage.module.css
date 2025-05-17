@@ -1,1 +1,6 @@
-
+.emptyMessage {
+  text-align: center;
+  font-size: 18px;
+  color: var(--gray);
+  margin-top: 40px;
+}

@@ -10,11 +10,14 @@ const favoritesSlice = createSlice({
   reducers: {
     toggleFavorite(state, action) {
       const id = action.payload;
-      if (state.ids.includes(id)) {
-        state.ids = state.ids.filter((favId) => favId !== id);
+      const index = state.ids.indexOf(id);
+
+      if (index !== -1) {
+        state.ids.splice(index, 1);
       } else {
         state.ids.push(id);
       }
+
       localStorage.setItem("favorites", JSON.stringify(state.ids));
     },
   },

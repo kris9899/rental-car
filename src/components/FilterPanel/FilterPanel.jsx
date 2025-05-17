@@ -1,8 +1,8 @@
 import { useDispatch, useSelector } from "react-redux";
 import { useEffect, useState } from "react";
-import { selectFilters } from "../../redux/filters/selectors";
+import CustomSelect from "../../ui/CustomSelect/CustomSelect";
 import { selectBrands } from "../../redux/brands/selectors";
-import { setFilter, resetFilters } from "../../redux/filters/slice";
+import { setFilter } from "../../redux/filters/slice";
 import { fetchBrands } from "../../redux/cars/operations";
 import css from "../FilterPanel/FilterPanel.module.css";
 
@@ -30,56 +30,61 @@ export default function FilterPanel() {
   };
 
   const handleSubmit = (event) => {
-    event.preventDefault(); // зупиняє перезавантаження сторінки
+    event.preventDefault();
     dispatch(setFilter(localFilters));
   };
 
   return (
     <form className={css.filterPanel} onSubmit={handleSubmit}>
-      <label>
-        Car brand
-        <select name="brand" value={localFilters.brand} onChange={handleChange}>
-          <option value="">Choose a brand</option>
-          {brands.map((brand) => (
-            <option key={brand} value={brand}>
-              {brand}
-            </option>
-          ))}
-        </select>
-      </label>
+      <div className={css.filterList}>
+        <CustomSelect
+          label="Car brand"
+          name="brand"
+          value={localFilters.brand}
+          onChange={handleChange}
+          options={brands}
+        />
+      </div>
 
-      <label>
-        Price/ 1 hour
-        <select name="price" value={localFilters.price} onChange={handleChange}>
-          <option value="">Choose a price</option>
-          {[30, 40, 50, 60, 70, 80].map((price) => (
-            <option key={price} value={price}>
-              To {price}
-            </option>
-          ))}
-        </select>
-      </label>
+      <div className={css.filterList}>
+        <CustomSelect
+          label="Price/1 hour"
+          name="price"
+          value={localFilters.price}
+          onChange={handleChange}
+          options={[30, 40, 50, 60, 70, 80, 90].map((p) => ({
+            label: `To ${p}`,
+            value: String(p),
+          }))}
+        />
+      </div>
 
       <fieldset className={css.mileageBox}>
-        <legend>Car mileage / km</legend>
-        <input
-          type="number"
-          name="mileageFrom"
-          placeholder="From "
-          value={localFilters.mileageFrom}
-          onChange={handleChange}
-        />
-
-        <input
-          type="number"
-          name="mileageTo"
-          placeholder="To"
-          value={localFilters.mileageTo}
-          onChange={handleChange}
-        />
+        <legend className={css.mileageLegend}>Car mileage / km</legend>
+        <div className={css.inputGroup}>
+          <input
+            className={css.fieldInput}
+            type="number"
+            name="mileageFrom"
+            placeholder="From "
+            value={localFilters.mileageFrom}
+            onChange={handleChange}
+          />
+          <div className={css.divider}></div>
+          <input
+            className={css.fieldInput}
+            type="number"
+            name="mileageTo"
+            placeholder="To"
+            value={localFilters.mileageTo}
+            onChange={handleChange}
+          />
+        </div>
       </fieldset>
 
-      <button type="submit">Search</button>
+      <button type="submit" className={css.searchBtn}>
+        Search
+      </button>
     </form>
   );
 }

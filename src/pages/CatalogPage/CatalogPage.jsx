@@ -76,6 +76,11 @@ export default function CatalogPage() {
     <section className={css.section}>
       <FilterPanel />
       {isLoading && <Loader />}
+      {!isLoading && cars.length === 0 && (
+        <p className={css.emptyMessage}>
+          No cars found. Try changing the filters.
+        </p>
+      )}
       {cars.length > 0 && <CarsList />}
       {cars.length > 0 && page < totalPages && (
         <div ref={loadMoreRef}>

@@ -1,6 +1,6 @@
 import { Routes, Route } from "react-router-dom";
 import { ROUTES } from "../../constants/index.js";
-
+import { useRef } from "react";
 import Layout from "../Layout/Layout.jsx";
 import HomePage from "../../pages/HomePage/HomePage.jsx";
 import CatalogPage from "../../pages/CatalogPage/CatalogPage.jsx";
