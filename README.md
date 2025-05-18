@@ -32,9 +32,11 @@
    3.Встановити залежності:npm install
    4.Запустити проєкт:npm run dev
 
-##Демо
+## Демо
 
-втор
+https://rental-car-zeta-ten.vercel.app/
+
+## Aвтор
 
 Khrystyna Storozhuk
 💼 Junior Full-Stack Developer
