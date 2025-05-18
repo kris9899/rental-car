@@ -1,12 +1,41 @@
-# React + Vite
+# 🚗 Rental Car App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Опис
 
-Currently, two official plugins are available:
+**Rental Car App** — це веб-застосунок для перегляду, фільтрації та бронювання автомобілів. Користувачі можуть знаходити авто за брендом, ціною, пробігом, переглядати детальну інформацію про кожну машину, а також здійснювати бронювання через інтерактивну форму.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Основні функції
 
-## Expanding the ESLint configuration
+- Пошук і фільтрація авто за:
+  - брендом
+  - ціною
+  - пробігом
+- Детальна сторінка авто з фото, описом і технічними характеристиками
+- Форма бронювання з валідацією
+- Плавна навігація та адаптивний інтерфейс
+- Збереження обраних авто (обране)
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## Технології
+
+- **React**
+- **Redux Toolkit**
+- **React Router**
+- **React Hook Form + Yup**
+- **React DatePicker**
+- **CSS Modules**
+- **Vite**
+
+## Інсталяція
+
+1. Клонувати репозиторій:https://github.com/kris9899/rental-car
+   2.Перейти в директорію проєкту:cd rental-car-app
+   3.Встановити залежності:npm install
+   4.Запустити проєкт:npm run dev
+
+##Демо
+
+втор
+
+Khrystyna Storozhuk
+💼 Junior Full-Stack Developer
+📧 khrystynastorozhuk72@gmail.com

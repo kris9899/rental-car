@@ -10,11 +10,14 @@ export const fetchCars = createAsyncThunk(
   "cars/fetchCars",
   async ({ brand, price, mileageFrom, mileageTo, page = 1 }, thunkAPI) => {
     try {
+      const clean = (value) =>
+        typeof value === "string" ? value.replace(/,/g, "") : value;
+
       const params = {
         brand,
         rentalPrice: price,
-        minMileage: mileageFrom,
-        maxMileage: mileageTo,
+        minMileage: clean(mileageFrom),
+        maxMileage: clean(mileageTo),
         page,
         limit: 12,
       };

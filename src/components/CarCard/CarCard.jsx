@@ -6,7 +6,9 @@ import heartFilledIcon from "../../assets/heart-active.svg";
 import { toggleFavorite } from "../../redux/favorite/slice";
 import { selectFavoriteIds } from "../../redux/favorite/selectors";
 import { exctractCityandCountry } from "../../utils/extractCityandCountry";
+import { formatMileage } from "../../utils/formatMileage.js";
 
+import { ROUTES } from "../../constants";
 export default function CarCard({
   id,
   year,
@@ -26,9 +28,6 @@ export default function CarCard({
   const handleToggleFavorite = () => {
     dispatch(toggleFavorite(id));
   };
-
-  const formatMileage = (km) =>
-    `${new Intl.NumberFormat("uk-UA").format(km)} km`;
 
   return (
     <div className={css.wrapper}>
@@ -56,7 +55,7 @@ export default function CarCard({
           <li>{type}</li>
           <li>{formatMileage(mileage)}</li>
         </ul>
-        <Link to={`/catalog/${id}`} className={css.link}>
+        <Link to={`${ROUTES.CATALOG}/${id}`} className={css.link}>
           Read more
         </Link>
       </div>

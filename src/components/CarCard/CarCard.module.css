@@ -28,7 +28,7 @@
   justify-content: space-between;
   align-items: center;
   flex-wrap: nowrap;
-  gap: 8px; /* для безпечного простору */
+  gap: 8px;
   margin-top: 16px;
   margin-bottom: 8px;
 }
@@ -79,7 +79,7 @@
   text-align: left;
   display: inline-flex;
   align-items: center;
-  padding-right: 8px; /* додає простір для лінії */
+  padding-right: 8px;
 }
 
 .detailsList li:not(:last-child)::after {

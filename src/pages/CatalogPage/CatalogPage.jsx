@@ -25,13 +25,12 @@ export default function CatalogPage() {
   const prevCarsCountRef = useRef(0);
 
   useEffect(() => {
-    // скидання при вході на сторінку
     dispatch(resetFilters());
     dispatch(resetCars());
     setPage(1);
     prevFiltersRef.current = filters;
     dispatch(fetchCars({ page: 1 }));
-  }, []); // ⬅️ тільки один раз при mount
+  }, []);
 
   useEffect(() => {
     const prevFilters = prevFiltersRef.current;

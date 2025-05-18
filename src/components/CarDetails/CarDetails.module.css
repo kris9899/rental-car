@@ -1,19 +1,126 @@
-.layout {
+.carDetailsLayout {
   display: flex;
-  gap: 32px; /* або скільки хочеш відступу */
+  justify-content: center;
+  flex-direction: row;
+  align-items: center;
+  gap: 72px;
+  padding: 104px 120px;
   align-items: flex-start;
+  flex-wrap: wrap;
+}
+
+.leftColumn {
+  flex: 0 0 640px;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.rightColumn {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  flex: 1;
+  min-width: 300px;
 }
 
 .carImg {
-  width: 640px; /* або фіксована ширина, напр. 500px */
-  max-width: 600px;
+  border-radius: 19px;
+  width: 640px;
   height: 512px;
   object-fit: cover;
-  border-radius: 12px;
+}
+.title {
+  font-family: var(--font-family);
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 133%;
+  color: var(--main);
+  margin-bottom: 10px;
+}
+.carId {
+  font-family: var(--font-family);
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 125%;
+  color: var(--gray);
+  margin-bottom: 10px;
+}
+.metaList {
+  display: flex;
+  flex-wrap: wrap;
+  column-gap: 16px;
+  row-gap: 16px;
+  align-items: center;
+  margin-bottom: 32px;
+  list-style: none;
+  padding: 0;
+}
+.metaList li {
+  font-family: var(--font-family);
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 125%;
+  color: var(--main);
+  display: flex;
+  align-items: center;
+  gap: 4px;
 }
 
-.details {
-  flex: 1;
+.metaList .price {
+  flex-basis: 100%;
+  margin-top: 4px;
+  font-family: var(--font-family);
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 133%;
+  color: var(--button);
+}
+.description {
+  font-family: var(--font-family);
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 125%;
+  color: var(--main);
+  margin-bottom: 56px;
+}
+.descriptionList {
   display: flex;
   flex-direction: column;
+}
+.descriptionList > ul {
+  margin-bottom: 110px;
+}
+
+.descriptionList > ul:last-of-type {
+  margin-bottom: 0;
+}
+
+.conditionItem {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 8px;
+  font-family: var(--font-family);
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 125%;
+  color: var(--main);
+  margin-bottom: 16px;
+}
+.conditionItem:last-child {
+  margin-bottom: 0;
+}
+.conditionItem img {
+  margin: 0;
+  flex-shrink: 0;
+}
+.title {
+  font-family: var(--font-family);
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 120%;
+  color: var(--main);
+  margin-bottom: 20px;
 }
