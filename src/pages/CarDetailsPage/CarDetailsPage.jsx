@@ -3,7 +3,7 @@ import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { fetchCarById } from "../../redux/cars/operations";
 import {
-  selectSelectedCars,
+  selectSelectedCar,
   selectCarsLoading,
 } from "../../redux/cars/selectors";
 import CarDetails from "../../components/CarDetails/CarDetails";
@@ -14,7 +14,7 @@ export default function CarDetailsPage() {
   const { id } = useParams();
   const dispatch = useDispatch();
   const isLoading = useSelector(selectCarsLoading);
-  const car = useSelector(selectSelectedCars);
+  const car = useSelector(selectSelectedCar);
 
   useEffect(() => {
     dispatch(fetchCarById(id));
