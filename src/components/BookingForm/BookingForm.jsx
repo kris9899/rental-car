@@ -14,6 +14,7 @@ import "../../styles/datepicker.css";
 export default function BookingForm({ carName }) {
   const isLoading = useSelector(selectCarsLoading);
   const [startDate, setStartDate] = useState(null);
+  const [endDate, setEndDate] = useState(null);
 
   const {
     register,
