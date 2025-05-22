@@ -44,7 +44,7 @@ export default function CarCard({
       <div className={css.cardContent}>
         <div className={css.titleRow}>
           <h2 className={css.title}>
-            {brand} <span className={css.model}>{model}</span>, {year}
+            {brand}&nbsp; <span className={css.model}>{model}</span>, {year}
           </h2>
           <span className={css.price}>${rentalPrice}</span>
         </div>

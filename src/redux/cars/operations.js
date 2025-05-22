@@ -14,7 +14,7 @@ export const fetchCars = createAsyncThunk(
         typeof value === "string" ? value.replace(/,/g, "") : value;
 
       const params = {
-        brand,
+        make: brand,
         rentalPrice: price,
         minMileage: clean(mileageFrom),
         maxMileage: clean(mileageTo),
