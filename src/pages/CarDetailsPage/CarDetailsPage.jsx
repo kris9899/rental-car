@@ -14,7 +14,7 @@ export default function CarDetailsPage() {
   const { id } = useParams();
   const dispatch = useDispatch();
   const isLoading = useSelector(selectCarsLoading);
-  const car = useSelector(selectSelectedCar);
+  const car = useSelector(selectSelectedCars);
 
   useEffect(() => {
     dispatch(fetchCarById(id));
@@ -30,8 +30,9 @@ export default function CarDetailsPage() {
     );
   }
 
-  return;
-  <div className={css.wrap}>
-    <CarDetails car={car} />
-  </div>;
+  return (
+    <div className={css.wrap}>
+      <CarDetails car={car} />
+    </div>
+  );
 }
