@@ -50,7 +50,7 @@ const carsSlice = createSlice({
         };
       })
 
-      .addCase(fetchCarById.rejected, (state) => {
+      .addCase(fetchCarById.rejected, (state, action) => {
         state.isLoading = false;
         state.selectedCar = null;
         state.error = action.payload;
