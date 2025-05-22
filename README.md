@@ -1,43 +1,50 @@
-# 🚗 Rental Car App
+# 🚗 RentalCar
 
-## Опис
+A responsive car rental application built with React, Redux Toolkit, Axios, and Vite. The app allows users to browse available vehicles, filter them by brand, price, and mileage, and book a car directly through the interface.
 
-**Rental Car App** — це веб-застосунок для перегляду, фільтрації та бронювання автомобілів. Користувачі можуть знаходити авто за брендом, ціною, пробігом, переглядати детальну інформацію про кожну машину, а також здійснювати бронювання через інтерактивну форму.
+## 🔧 Technologies Used
 
-## Основні функції
+- React
+- Redux Toolkit
+- React Router
+- Axios
+- React Hook Form + Yup
+- React DatePicker
+- CSS Modules
+- Vite
 
-- Пошук і фільтрація авто за:
-  - брендом
-  - ціною
-  - пробігом
-- Детальна сторінка авто з фото, описом і технічними характеристиками
-- Форма бронювання з валідацією
-- Плавна навігація та адаптивний інтерфейс
-- Збереження обраних авто (обране)
+## ✨ Features
 
-## Технології
+- ✅ View a full catalog of cars with backend pagination
+- ✅ Filter by brand, price per hour, and mileage range
+- ✅ View detailed information for each car
+- ✅ Add cars to favorites (saved in localStorage)
+- ✅ Booking form with time and date selection
+- ✅ Responsive and clean user interface
+- ✅ Loader and toast notifications for better UX
+- ✅ Custom scrollbar styling
 
-- **React**
-- **Redux Toolkit**
-- **React Router**
-- **React Hook Form + Yup**
-- **React DatePicker**
-- **CSS Modules**
-- **Vite**
+## 📦 Getting Started
 
-## Інсталяція
+To run the project locally:
 
-1. Клонувати репозиторій:https://github.com/kris9899/rental-car
-   2.Перейти в директорію проєкту:cd rental-car-app
-   3.Встановити залежності:npm install
-   4.Запустити проєкт:npm run dev
+```bash
+git clone https://github.com/kris9899/rental-car
+cd rental-car
+npm install
+npm run dev
 
-## Демо
 
-https://rental-car-zeta-ten.vercel.app/
+🚀 Deployment
+This project is deployed on Vercel
+Live demo: https://rental-car-zeta-ten.vercel.app/
 
-## Aвтор
+
+
+👩‍💻 Author
 
 Khrystyna Storozhuk
 💼 Junior Full-Stack Developer
 📧 khrystynastorozhuk72@gmail.com
+
+```
